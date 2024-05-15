@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class MainTest {
+public class Exercise1-1Test {
     private final PrintStream originalOut = System.out;
     private ByteArrayOutputStream outContent;
 
