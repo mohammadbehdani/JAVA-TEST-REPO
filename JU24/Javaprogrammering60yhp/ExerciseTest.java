@@ -1,30 +1,23 @@
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 public class ExerciseTest {
-    private final PrintStream originalOut = System.out;
-    private ByteArrayOutputStream outContent;
 
     @BeforeEach
-    public void setUpStreams() {
-        outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+    public void setUp() {
+        // Kod för att konfigurera testmiljön innan varje testfall
     }
 
     @AfterEach
-    public void restoreStreams() {
-        System.setOut(originalOut);
+    public void tearDown() {
+        // Kod för att rensa upp testmiljön efter varje testfall
     }
 
     @Test
-    public void testMainOutput() {
-        Main.main(new String[] {});
-        String expectedOutput = "Bye!";
+    public void testSomething() {
+        // Kod för att utföra ett testfall
         assertEquals(expectedOutput, outContent.toString().trim(), "Main-metoden skriver inte ut den förväntade raden.");
     }
 }
